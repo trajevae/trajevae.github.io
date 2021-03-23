@@ -11,6 +11,16 @@ ffmpeg \
     videos/reconstructed_sequences.mp4 -y
 
 ffmpeg \
+    -i videos/renders-single-frame-sample-vs-traj/human3d-data-augmentation/eating-S9-2050-2151_17/real_none.mp4 \
+    -i videos/renders-single-frame-sample-vs-traj/human3d-data-augmentation/eating-S9-2050-2151_17/0/custom_none.mp4 \
+    -i videos/renders-single-frame-sample-vs-traj/human3d-data-augmentation/eating-S9-2050-2151_17/0/custom_3.mp4 \
+    -i videos/renders-single-frame-sample-vs-traj/human3d-data-augmentation/eating-S9-2050-2151_17/0/custom_3_6.mp4 \
+    -i videos/renders-single-frame-sample-vs-traj/human3d-data-augmentation/eating-S9-2050-2151_17/0/custom_3_6_16.mp4 \
+    -i videos/renders-single-frame-sample-vs-traj/human3d-data-augmentation/eating-S9-2050-2151_17/0/custom_3_6_16_13.mp4 \
+    -filter_complex hstack=inputs=6 \
+    videos/reconstructed_custom_sequences.mp4 -y
+
+ffmpeg \
     -i videos/renders-several-frames-sample-vs-traj/human3d-data-augmentation/walkdog-S9-1525-1626_17/0/fake_6_13.mp4 \
     -i videos/renders-several-frames-sample-vs-traj/human3d-data-augmentation/directions-S9-2175-2276_17/0/fake_16_13.mp4 \
     -i videos/renders-several-frames-sample-vs-traj/human3d-data-augmentation/greeting_2-S11-400-501_17/0/fake_16_13.mp4 \
@@ -47,6 +57,16 @@ ffmpeg \
     -i videos/renders-several-frames-sample-vs-diff-traj/human3d-data-augmentation/walktogether_1-S9-1050-1151_17_0/real.mp4 \
     -filter_complex hstack=inputs=6 \
     videos/same-pose-diff-traj-true.mp4 -y
+
+ffmpeg \
+    -i videos/renders-several-frames-sample-vs-diff-traj/human3d-data-augmentation/discussion_2-S9-325-426_17_0/corresponding.mp4 \
+    -i videos/renders-several-frames-sample-vs-diff-traj/human3d-data-augmentation/greeting-S9-525-626_17_0/corresponding.mp4 \
+    -i videos/renders-several-frames-sample-vs-diff-traj/human3d-data-augmentation/greeting-S9-1300-1401_17_0/corresponding.mp4 \
+    -i videos/renders-several-frames-sample-vs-diff-traj/human3d-data-augmentation/smoking-S9-0-101_17_0/corresponding.mp4 \
+    -i videos/renders-several-frames-sample-vs-diff-traj/human3d-data-augmentation/walkdog_1-S9-1200-1301_17_0/corresponding.mp4 \
+    -i videos/renders-several-frames-sample-vs-diff-traj/human3d-data-augmentation/walktogether_1-S9-1050-1151_17_0/corresponding.mp4 \
+    -filter_complex hstack=inputs=6 \
+    videos/same-pose-diff-traj-corresponding.mp4 -y
 
 
 

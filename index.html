@@ -15,6 +15,7 @@
     href="https://fonts.googleapis.com/css2?family=B612+Mono&family=Open+Sans&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/academicons.min.css" />
 </head>
 
 <body>
@@ -22,7 +23,7 @@
     <div class=" row">
       <div class="col s12">
         <h1>
-          TrajeVAE - Controllable Human Motion Generation with
+          TrajeVAE: Controllable Human Motion Generation with
           Trajectories <br />
           Supplementary Material
         </h1>
@@ -33,8 +34,28 @@
       <video style="width: 100%" autoplay loop muted>
         <source src="videos/scene.mp4" type="video/mp4">Teaser</video>
     </div>
-
     <hr>
+    <br />
+
+    <div class="row">
+      <div class="col s12 center">
+        <a class="btn-floating disabled tooltipped" data-position="bottom"
+          data-tooltip="Code (to be released!)">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="btn-floating grey waves-effect waves-light tooltipped"
+          data-position="bottom" data-tooltip="Abstract"
+          href="https://arxiv.org/abs/2104.00351">
+          <i class="ai ai-arxiv"></i>
+        </a>
+        <a class="btn-floating grey waves-effect waves-light tooltipped"
+          data-position="bottom" data-tooltip="Paper"
+          href="https://arxiv.org/pdf/2104.00351.pdf">
+          <i class="fas fa-file-pdf"></i> Paper
+        </a>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col s12">
         <div class="row">
@@ -56,11 +77,11 @@
 
                 To confirm that TrajeVAE uses both the information about the
                 trajectory and the initial pose, we show in the second row how
-                these motions change when we set trajectories $\mathbf{y}_1 =
-                \mathbf{y}_2 = \dots = \mathbf{y}_T$. When we provide four
-                trajectories in such a setting, the skeleton freezes for all
-                time. Small variations in time are caused by the sampling
-                process.
+                these motions change when we set trajectories such that
+                $\mathbf{y}_t = \mathbf{y}_1$ for $t \geq 2$. When we
+                provide four trajectories in such a setting, the skeleton
+                freezes for all time steps. Small variations in the pose for
+                four trajectories are caused by the sampling process.
               </p>
             </div>
           </div>
@@ -315,6 +336,21 @@
   <!-- Compiled and minified JavaScript -->
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script src="https://kit.fontawesome.com/2f4b26bfb0.js"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.tooltipped');
+      var instances = M.Tooltip.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function() {
+      $('.tooltipped').tooltip();
+    });
   </script>
 
 

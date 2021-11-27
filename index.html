@@ -16,26 +16,53 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/academicons.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
   <div class="container">
     <div class=" row">
-      <div class="col s12">
+      <div class="col s12 center">
         <h1>
+          <i class="fas fa-walking"></i>
           TrajeVAE: Controllable Human Motion Generation with
-          Trajectories <br />
-          Supplementary Material
+          Trajectories <i class="fas fa-walking"></i>
         </h1>
+        <h2>
+          Supplementary Material
+        </h2>
       </div>
     </div>
 
-    <div>
-      <video style="width: 100%" autoplay loop muted>
-        <source src="videos/scene.mp4" type="video/mp4">Teaser</video>
+    <div class="row">
+      <div class="col s2 center offset-s3">
+        Kacper Kania<sup>1</sup>
+      </div>
+      <div class="col s2 center">
+        Marek Kowalski<sup>2</sup>
+      </div>
+      <div class="col s2 center">
+        Tomasz Trzciński<sup>3,4</sup>
+      </div>
     </div>
-    <hr>
-    <br />
+    <div class="row">
+      <div class="col s1"> </div>
+      <div class="col s10 center">
+        Warsaw University of Technology<sup>1</sup>
+        <span style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+        Microsoft<sup>2</sup>
+        <span style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+        Tooploox<sup>3</sup>
+        <span style="margin-left: 1em ; margin-right: 1em;">&nbsp;</span>
+        Jagiellonian University<sup>4</sup>
+      </div>
+      <div class="col s1"> </div>
+    </div>
 
     <div class="row">
       <div class="col s12 center">
@@ -49,12 +76,18 @@
           <i class="ai ai-arxiv"></i>
         </a>
         <a class="btn-floating grey waves-effect waves-light tooltipped"
-          data-position="bottom" data-tooltip="Paper"
-          href="https://arxiv.org/pdf/2104.00351.pdf">
+          data-position="bottom" data-tooltip="Paper" href="/trajevae.pdf">
           <i class="fas fa-file-pdf"></i> Paper
         </a>
       </div>
     </div>
+
+    <br />
+    <div>
+      <video style="width: 100%" autoplay loop muted>
+        <source src="videos/scene.mp4" type="video/mp4">Teaser</video>
+    </div>
+    <hr>
 
     <div class="row">
       <div class="col s12">
@@ -301,6 +334,82 @@
       </div>
     </div>
     <hr>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <h3>
+            Abstract
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <p>
+              The creation of plausible and controllable 3D human motion
+              animations is a long-standing problem that requires a manual
+              intervention of skilled artists. Current machine learning
+              approaches can semi-automate the process, however, they are
+              limited in a significant way: they can handle only a single
+              trajectory of the expected motion that precludes fine-grained
+              control over the output. To mitigate that issue, we reformulate
+              the problem of future pose prediction into pose completion in
+              space and time where multiple trajectories are represented as
+              poses with missing joints. We show that such a framework can
+              generalize to other neural networks designed for future pose
+              prediction. Once trained in this framework, a model is capable of
+              predicting sequences from any number of trajectories. We propose
+              a novel transformer-like architecture, TrajeVAE, that builds
+              on this idea and provides a versatile framework for 3D human
+              animation. We demonstrate that TrajeVAE offers better accuracy
+              than the trajectory-based reference approaches and methods that
+              base their predictions on past poses. We also show that it can
+              predict reasonable future poses even if provided only with an
+              initial pose.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <h3>
+            Bibtex
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <pre>
+@article{kania2021trajevae,
+    title={TrajeVAE: Controllable Human Motion Generation from Trajectories},
+    author={Kania, Kacper and Kowalski, Marek and Trzci{\'n}ski, Tomasz},
+    journal={arXiv preprint arXiv:2104.00351},
+    year={2021}
+} </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <h3>
+            Acknowledgements
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <p>
+              This work was supported by Microsoft Research through its EMEA
+              PhD Scholarship Programme. We thank Eric Hedlin and members of
+              CVLab at Warsaw University of Technology for insightful comment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
